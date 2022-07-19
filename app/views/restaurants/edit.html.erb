@@ -1,0 +1,14 @@
+<center>
+<%= form_with model: @restaurant do |form| %> 
+
+	<%= form.label :restaurant_name%><br>
+	<%= form.text_field :restaurant_name%> 
+	<br><br> 
+	<%=  form.fields_for :menus do |form|%>
+		<%= form.label :menu_name %><br>
+		<%= form.text_field :menu_name %> 
+		<br><br> 
+	<% end %> 
+	<%= form.submit %> 
+<% end %>
+</center>

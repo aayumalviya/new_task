@@ -1,0 +1,14 @@
+<center> 
+<h3>Restaurants</h3>
+<% @restaurants.each do |restaurant| %>
+	<b> Restaurant Name : </b><%=  restaurant.restaurant_name %><br><br>
+	<%= link_to "show", restaurant_path(restaurant), class:"btn btn-info btn-sm" %>
+	<%= link_to "Delete", restaurant_path(restaurant), method: :delete, class:"btn btn-danger btn-sm"  %>	
+	<%= link_to "Edit", edit_restaurant_path(restaurant), class:"btn btn-info btn-sm" %>
+	<hr style="width:400px;">
+<% end %> 
+
+<br>
+<button><%= link_to "New restaurant" , new_restaurant_path, class:"btn btn-warning btn-sm" %><br></button> 
+<br>
+</center>
