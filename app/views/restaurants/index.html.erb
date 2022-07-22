@@ -1,5 +1,5 @@
 <center> 
-<h3>Restaurants</h3>
+<h3>Restaurants</h3> 
 <% @restaurants.each do |restaurant| %>
 	<b> Restaurant Name : </b><%=  restaurant.restaurant_name %><br><br>
 	<%= link_to "show", restaurant_path(restaurant), class:"btn btn-info btn-sm" %>
